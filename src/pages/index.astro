@@ -1,0 +1,13 @@
+---
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+import SurgeryHero from "../components/projects/SurgeryHero.astro";
+import SurgeryContent from "../components/projects/SurgeryContent.astro";
+import ProjectPlayback from "../components/ProjectPlayback.astro";
+import { labProjects } from "../data/lab-projects";
+const project = labProjects[0];
+---
+<ProjectLayout title={project.title} shortTitle={project.shortTitle} description={project.description} slug={project.slug} source={project.source} nav={[]} bare>
+  <SurgeryHero />
+  <div class="project-content"><SurgeryContent /></div>
+  <ProjectPlayback />
+</ProjectLayout>
